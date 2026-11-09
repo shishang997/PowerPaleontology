@@ -1,0 +1,35 @@
+# Runtime pipeline configuration
+
+project_name: PowerPaleontology
+
+mineru:
+  endpoint_env: MINERU_API_BASE
+  api_key_env: MINERU_API_KEY
+  timeout_seconds: 120
+
+geogpt:
+  endpoint_env: GEOGPT_API_BASE
+  api_key_env: GEOGPT_API_KEY
+  model: geogpt-72b
+  temperature: 0.0
+  max_output_tokens: 2048
+
+chunking:
+  chunk_tokens: 1024
+  overlap_tokens: 128
+  preserve_sections: true
+
+embedding:
+  provider_env: EMBEDDING_PROVIDER
+  model: bge-m3
+  batch_size: 32
+
+retrieval:
+  lexical_top_k: 50
+  vector_top_k: 50
+  rerank_top_k: 20
+  final_top_k: 10
+
+validation:
+  low_confidence_threshold: 0.75
+  require_evidence: true
