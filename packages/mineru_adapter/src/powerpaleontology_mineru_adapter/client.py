@@ -22,6 +22,9 @@ import os
 import time
 import hashlib
 
+# pathlib.Path 用于表示本地 PDF 文件路径。
+from pathlib import Path
+
 # quote 用于安全地拼接 task_id 到 URL 中。
 from urllib.parse import quote
 
